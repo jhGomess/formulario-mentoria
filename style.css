@@ -9,8 +9,53 @@
 
 :root {
   font-size: 62.5%;
+
+  --bg-body: #293241;
+  --bg-container: #f67669;
 }
 
 body {
+  font-family: "Quicksand", sans-serif;
   font-size: 1.6rem;
+
+  background-color: var(--bg-body);
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+h1 {
+  color: white;
+}
+
+.container {
+  background-color: var(--bg-container);
+  width: 40rem;
+  height: 25rem;
+  border-radius: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+
+  font-size: 2.4rem;
+
+  transition: font-weight 200ms;
+}
+
+a:hover {
+  font-weight: 700;
 }
