@@ -16,6 +16,7 @@
 
   --bg-input: #fafafc;
   --label-color: #4e4958;
+  --span-color: #c1bccc;
 }
 
 body * {
@@ -74,6 +75,10 @@ form {
   margin-top: 6rem;
   border-radius: 2rem 2rem 0rem 0rem;
   padding: 6.4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
 }
 
 fieldset {
@@ -116,6 +121,20 @@ fieldset {
   color: var(--label-color);
   font-size: 1.4rem;
   line-height: 2.4rem;
+}
+
+.input-wrapper label span {
+  color: var(--span-color);
+  font-size: 12px;
+  line-height: 20px;
+
+  margin-left: 0.8rem;
+
+  transition: color 200ms;
+}
+
+.input-wrapper label span:hover {
+  color: var(--label-color);
 }
 
 .input-wrapper input {
