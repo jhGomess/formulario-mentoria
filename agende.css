@@ -17,6 +17,9 @@
   --bg-input: #fafafc;
   --label-color: #4e4958;
   --span-color: #c1bccc;
+
+  --bg-button: #ff5374;
+  --bg-button-hover: #da3455;
 }
 
 body * {
@@ -175,4 +178,39 @@ fieldset {
 
 .time > div {
   flex: 1;
+}
+
+footer {
+  height: 16rem;
+  border-radius: 0rem 0rem 2rem 2rem;
+  background: var(--bg-before);
+
+  margin-bottom: 15rem;
+  padding: 5rem 7rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer button {
+  height: 5.6rem;
+  padding: 1.6rem 4rem;
+  border-radius: 2rem;
+  background: var(--bg-button);
+
+  border: none;
+  color: white;
+  font-family: "Staatliches", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  /* letter-spacing: 1px; */
+
+  transition: background-color 200ms;
+}
+
+footer button:hover {
+  background-color: var(--bg-button-hover);
+  cursor: pointer;
 }
