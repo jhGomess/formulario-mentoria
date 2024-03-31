@@ -12,6 +12,11 @@
 
   --bg-body: #bfd7e4;
   --bg-before: #293241;
+
+  --form-before: #f67669;
+  --label-color: #4e4958;
+  --input-bg: #fafafc;
+  --border-color: #e6e6f0;
 }
 
 body * {
@@ -66,15 +71,36 @@ header p {
 form {
   min-height: 300px;
   background-color: #fff;
-  padding: 6.4rem;
+  padding: 5rem 6.4rem 6.4rem;
   border-radius: 2rem 2rem 2rem 2rem;
   margin-bottom: 15rem;
 
   position: relative;
+  z-index: 0;
+}
+
+form::before {
+  content: "";
+  width: 100%;
+  height: 13.3rem;
+  background-color: var(--form-before);
+  border-radius: 2rem 2rem 0px 0px;
+  /* padding-block: 5rem; */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 fieldset {
   border: none;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }
 
 fieldset legend {
@@ -85,14 +111,34 @@ fieldset legend {
   font-weight: 400;
   line-height: 3.4rem;
 
-  width: 100%;
-  height: 13.3rem;
-  background-color: #f67669;
-  border-radius: 2rem 2rem 0px 0px;
-  padding-block: 5rem;
+  margin-bottom: 6.4rem;
+}
 
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+.col-2 {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.input-wrapper {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label {
+  color: var(--label-color);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+
+.input-wrapper input {
+  border-radius: 0.8rem;
+  border: 1px solid var(--border-color);
+  background: var(--input-bg);
+  height: 5.6rem;
+
+  padding: 1.6rem;
 }
