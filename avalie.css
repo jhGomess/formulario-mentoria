@@ -49,9 +49,30 @@ body::before {
   margin-inline: auto;
 }
 
+nav {
+  padding-top: 4rem;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+nav a:hover {
+  transform: scale(1.01);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+nav span {
+  color: #fff;
+  font-size: 2rem;
+}
+
 header {
   width: 39rem;
-  margin: 10.6rem auto 3.2rem;
+  margin: 3.6rem auto 3.2rem;
   text-align: center;
 }
 
