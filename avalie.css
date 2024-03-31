@@ -14,7 +14,9 @@
   --bg-before: #293241;
 
   --form-before: #f67669;
+  --submit-hover: #df5a4b;
   --label-color: #4e4958;
+  --span-color: #c1bccc;
   --legend-color: #253b51;
   --input-bg: #fafafc;
   --border-color: #e6e6f0;
@@ -150,6 +152,21 @@ form > fieldset:nth-child(1) .fieldset-wrapper legend {
   line-height: 2.4rem;
 }
 
+.input-wrapper label span {
+  color: var(--span-color);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2rem;
+
+  margin-left: 1rem;
+
+  transition: color 200ms;
+}
+
+.input-wrapper label span:hover {
+  color: var(--label-color);
+}
+
 .input-wrapper input,
 .input-wrapper select,
 .input-wrapper textarea {
@@ -229,4 +246,26 @@ form > fieldset:nth-child(1) .fieldset-wrapper legend {
 
 .col-3 > div:nth-child(2) {
   gap: 1rem;
+}
+
+.submit {
+  font-family: "Staatliches", sans-serif;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+
+  padding: 1.4rem 4rem;
+  border: none;
+  background-color: var(--form-before);
+  border-radius: 0.8rem;
+
+  margin-top: 4rem;
+
+  transition: background-color 200ms;
+}
+
+.submit:hover {
+  background-color: var(--submit-hover);
+  cursor: pointer;
 }
