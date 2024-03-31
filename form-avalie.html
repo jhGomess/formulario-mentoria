@@ -94,7 +94,13 @@
             <div class="col-3">
               <div class="input-wrapper">
                 <label for="date">Data<span>(DD/MM/AAAA)</span></label>
-                <input type="date" id="date" />
+                <input
+                  id="date"
+                  type="text"
+                  placeholder=""
+                  onfocus="this.type='date'"
+                  onblur="if (!this.value) this.type='text'"
+                />
               </div>
 
               <div class="col-2">
