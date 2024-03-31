@@ -15,6 +15,7 @@
 
   --form-before: #f67669;
   --label-color: #4e4958;
+  --legend-color: #253b51;
   --input-bg: #fafafc;
   --border-color: #e6e6f0;
 }
@@ -77,6 +78,10 @@ form {
 
   position: relative;
   z-index: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
 }
 
 form::before {
@@ -103,15 +108,24 @@ fieldset {
   gap: 1.6rem;
 }
 
-fieldset legend {
-  text-align: center;
+form > fieldset:nth-child(1) .fieldset-wrapper legend {
   color: #fff;
+  margin-bottom: 6.4rem;
+  border: none;
+  padding: 0;
+}
+
+.fieldset-wrapper legend {
+  text-align: center;
+  color: var(--legend-color);
   font-family: "Staatliches", sans-serif;
   font-size: 2.4rem;
   font-weight: 400;
   line-height: 3.4rem;
 
-  margin-bottom: 6.4rem;
+  margin-bottom: 1.6rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .col-2 {
@@ -125,20 +139,80 @@ fieldset legend {
 
   display: flex;
   flex-direction: column;
+  gap: 0.8rem;
 }
 
-.input-wrapper label {
+.input-wrapper label,
+.checkbox-wrapper label {
   color: var(--label-color);
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.4rem;
 }
 
-.input-wrapper input {
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea {
   border-radius: 0.8rem;
   border: 1px solid var(--border-color);
   background: var(--input-bg);
   height: 5.6rem;
 
+  color: var(--label-color);
   padding: 1.6rem;
+}
+
+.input-wrapper select {
+  width: 50%;
+
+  appearance: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 1.6rem top 50%;
+
+  margin-bottom: 1.6rem;
+}
+
+.input-wrapper textarea {
+  height: 16rem;
+  margin-bottom: 1.6rem;
+}
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.checkbox-wrapper label::before {
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  display: block;
+
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.8rem;
+}
+
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1722_14)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1722_14'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.checkbox-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  opacity: 0;
+}
+
+.checkbox-wrapper input:focus + label::before {
+  outline: 2px solid black;
 }
