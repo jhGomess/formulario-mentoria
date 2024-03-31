@@ -9,8 +9,25 @@
 
 :root {
   font-size: 62.5%;
+
+  --bg-body: #bfd7e4;
+  --bg-before: #293241;
 }
 
 body {
   font-size: 1.6rem;
+
+  background-color: var(--bg-body);
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 465px;
+  background-color: var(--bg-before);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
