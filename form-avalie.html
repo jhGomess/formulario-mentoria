@@ -106,12 +106,24 @@
               <div class="col-2">
                 <div class="input-wrapper">
                   <label for="begin">Das</label>
-                  <input type="time" id="begin" />
+                  <input
+                    id="begin"
+                    type="text"
+                    placeholder=""
+                    onfocus="this.type='time'"
+                    onblur="if (!this.value) this.type='text'"
+                  />
                 </div>
 
                 <div class="input-wrapper">
                   <label for="end">Até</label>
-                  <input type="time" id="end" />
+                  <input
+                    id="end"
+                    type="text"
+                    placeholder=""
+                    onfocus="this.type='time'"
+                    onblur="if (!this.value) this.type='text'"
+                  />
                 </div>
               </div>
             </div>

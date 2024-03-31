@@ -235,3 +235,8 @@ footer button:hover {
   background-color: var(--bg-button-hover);
   cursor: pointer;
 }
+
+#begin,
+#end {
+  width: 100%;
+}
