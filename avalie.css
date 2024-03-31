@@ -216,3 +216,17 @@ form > fieldset:nth-child(1) .fieldset-wrapper legend {
 .checkbox-wrapper input:focus + label::before {
   outline: 2px solid black;
 }
+
+.col-3 {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.col-3 > div {
+  flex: 1;
+}
+
+.col-3 > div:nth-child(2) {
+  gap: 1rem;
+}
