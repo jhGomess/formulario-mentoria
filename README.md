@@ -18,7 +18,7 @@ Projeto desenvolvido no stage 3 do programa Explorer da Rocketseat, que simula d
 <br>
 
 <p align="center">
-  <img alt="componentes trabalhos" src=".github/preview.png" width="100%">
+  <img alt="componentes trabalhos" src="./.github/preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
